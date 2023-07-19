@@ -68,3 +68,34 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+.index.css
+.hoveres {
+  @apply hidden;
+}
+.hovered: hover .hoveres {
+  @apply flex-colo;
+}
+.flex-colo {
+  @apply flex flex-col justify-center items-center;
+}
+.flex-btn {
+  @apply flex justify-between items-center;
+}
+.flex-rows {
+  @apply fllex flex-row justify-center items-center;
+}
+.transitions {
+  @apply transition duration-300 ease-in;
+}
+.zIndex {
+  z-index: 1000;
+}
+
+input: focus,
+textarea:focus,
+select: focus {
+  outline: 0 !important;
+  box-shadow: none !important;
+}
