@@ -22,14 +22,23 @@ const Login = () => {
     }
   };
 
+  const handleDelete = async () => {
+    
+    setError("");
+    try {
+      navigate("/");
+    } catch (error) {
+      console.log(error);
+      setError(error.message);
+    }
+  };
+
   const [nav, setNav] = useState(false);
   const handleNav = () => {
     setNav(!nav);
   };
 
-  const handleDelete = () => {
-      console.log('')
-  }
+  
 
   return (
     <div className="w-full h-screen">
@@ -42,10 +51,11 @@ const Login = () => {
       <div className="fixed w-full px-4 py-24 z-50">
         <div className="max-w-[450px] h-[600px] mx-auto bg-black/75 text-white">
           <div className="max-w-[320px] mx-auto py-16">
-            <div onClick={handleDelete} className="flex justify-end items-center">
-              <AiOutlineClose
-                size={30}
-              />
+            <div
+              onClick={handleDelete}
+              className="flex justify-end items-center"
+            >
+              <AiOutlineClose size={30} />
             </div>
 
             <h1 className="text-3xl font-bold text-center">Sign In</h1>
@@ -65,12 +75,14 @@ const Login = () => {
                 placeholder="Password"
                 autoComplete="current-password"
               />
+              
               <button className="bg-red-600 py-3 my-6 rounded font-bold">
                 Sign In
               </button>
               <div className="flex justify-between items-center text-sm text-gray-600">
-                <p>
+                
                   <input className="mr-2" type="checkbox" />
+                 <p>
                   Remember me
                 </p>
                 <p>Need Help?</p>

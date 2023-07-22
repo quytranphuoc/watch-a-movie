@@ -78,10 +78,13 @@ const Navbar = () => {
               <li>Community</li>
               <li>About</li>
               <Link to="/account">
-                <button className="text-center items-end">
-                  <FaRegUserCircle className="flex flex-wrap items-center justify-center w-full" />
+                <div className="text-blue-600 text-center items-end">
+                  <FaRegUserCircle
+                    className="flex flex-wrap items-center justify-center w-full"
+                    size={30}
+                  />
                   Account
-                </button>
+                </div>
               </Link>
               <button onClick={handleLogout}>Logout</button>
             </ul>
